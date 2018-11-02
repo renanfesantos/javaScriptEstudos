@@ -40,13 +40,37 @@
 	</script>
 
 	<script>
-		declaracoesEmJavaScript();
+		document.write(declaracoesEmJavaScript());
 	</script>
-	
+
 	<p id="fraseQualquer">Eu sou uma frase qualquer</p>
 
 	<button type="button" onclick="dadosComInnerHTML();">Inserir
 		dados com InnerHTML</button>
+
+	<script type="text/javascript">
+		condicionais();
+	</script>
+
+	<p id="testeNullAndUndefined"></p>
+
+	<script>
+		document.getElementById("testeNullAndUndefined").innerHTML = 
+				typeof undefined
+				+ "<br>"
+				+ typeof null
+				+ "<br><br>"
+				+ (null === undefined) //testa a igualdade do objeto e seu tipo
+				+ "<br>" + (null == undefined);
+	</script>
+	
+	<p id="testeParametroERetorno"></p>
+
+	<script>
+		document.getElementById("testeParametroERetorno").innerHTML = 
+				"Multiplicação de 5 e 10 é igual a " + (funcaoComParametroERetorno(5, 10))
+	</script>
+
 
 
 </body>
